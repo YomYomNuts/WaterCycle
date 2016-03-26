@@ -4,7 +4,7 @@ using UnityEngine.Assertions;
 
 public class MicrophoneZoneScript : MonoBehaviour
 {
-    #region Public Attributes
+    #region Public Attributs
     private const int SAMPLECOUNT = 1024;   // Sample Count.
     private const float REFVALUE = 0.1f;    // RMS value for 0 dB.
     private const float THRESHOLD = 0.02f;  // Minimum amplitude to extract pitch (recieve anything)
@@ -12,7 +12,7 @@ public class MicrophoneZoneScript : MonoBehaviour
     public bool isBlowing;
     #endregion
 
-    #region Private Attributes
+    #region Private Attributs
     private AudioSource _AudioSource;
     private List<GameObject> ListObjectsActif = new List<GameObject>();
 

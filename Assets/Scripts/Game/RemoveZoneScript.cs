@@ -3,10 +3,10 @@ using System.Collections;
 
 public class RemoveZoneScript : MonoBehaviour
 {
-    #region Public Attributes
+    #region Public Attributs
     #endregion
 
-    #region Private Attributes
+    #region Private Attributs
     #endregion
 
     // Use this for initialization

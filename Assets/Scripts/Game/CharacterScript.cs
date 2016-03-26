@@ -3,13 +3,34 @@ using System.Collections;
 
 public class CharacterScript : MonoBehaviour
 {
-    #region Public Attributes
+    #region Public Attributs
     public int NumberLife;
     #endregion
 
-    #region Private Attributes
-    private int CurrentLife;
+    #region Private Attributs
+    public int CurrentLife;
     #endregion
+
+    #region Static Attributs
+    private static CharacterScript _instance;
+    public static CharacterScript Instance
+    {
+        get
+        {
+            if (CharacterScript._instance == null)
+                CharacterScript._instance = new CharacterScript();
+            return CharacterScript._instance;
+        }
+    }
+    #endregion
+
+    void Awake()
+    {
+        if (CharacterScript._instance == null)
+            CharacterScript._instance = this;
+        else if (CharacterScript._instance != this)
+            Destroy(this.gameObject);
+    }
 
     // Use this for initialization
     void Start ()
@@ -35,6 +56,6 @@ public class CharacterScript : MonoBehaviour
 
     public void LifeUp()
     {
-        CurrentLife = CurrentLife + 1 > NumberLife ? NumberLife : CurrentLife;
+        CurrentLife = CurrentLife + 1 > NumberLife ? NumberLife : CurrentLife + 1;
     }
 }

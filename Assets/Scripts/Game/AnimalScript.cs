@@ -3,11 +3,11 @@ using System;
 
 public class AnimalScript : MonoBehaviour
 {
-    #region Public Attributes
+    #region Public Attributs
     public static float ForcePowerSwap = 60.0f;
     #endregion
 
-    #region Private Attributes
+    #region Private Attributs
     private Rigidbody _Rigidbody;
     private int DirectionSwap;
     #endregion

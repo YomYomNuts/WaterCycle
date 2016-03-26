@@ -5,13 +5,13 @@ using UnityEngine.Assertions;
 
 public class LevelScript : MonoBehaviour
 {
-    #region Public Attributes
+    #region Public Attributs
     public List<GameObject> PlanesLevels;
     public float SpeedLevel;
     public Vector3 EndLevelsPosition;
     #endregion
 
-    #region Private Attributes
+    #region Private Attributs
     private Vector3 DiffBetweenLevels;
     #endregion
 
