@@ -11,13 +11,10 @@ public class TrashZoneScript : MonoBehaviour
     #endregion
 
     #region Private Attributs
-    private int shakeDir;
-    private int shakeCount;
     private Vector3 avrgAcc = Vector3.zero;
     private int countPos;
     private int countNeg;
     private int lastPeak;
-    private int firstPeak;
     private bool counting;
     private float timer;
     #endregion
@@ -88,10 +85,7 @@ public class TrashZoneScript : MonoBehaviour
             else
                 countNeg++;
             if (!counting)
-            {
                 counting = true;
-                firstPeak = peak;
-            }
         }
         else if (counting)
         {
@@ -99,11 +93,6 @@ public class TrashZoneScript : MonoBehaviour
             if (timer > endCountTime)
             {
                 counting = false;
-                shakeDir = firstPeak;
-                if (countPos > countNeg)
-                    shakeCount = countPos;
-                else
-                    shakeCount = countNeg;
                 countPos = 0;
                 countNeg = 0;
                 return true;
