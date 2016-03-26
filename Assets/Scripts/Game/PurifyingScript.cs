@@ -24,5 +24,6 @@ public class PurifyingScript : MonoBehaviour
     void OnMouseDown()
     {
         CharacterScript.Instance.LifeUp();
+        Destroy(gameObject);
     }
 }

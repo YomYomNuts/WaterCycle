@@ -4,7 +4,7 @@ using System;
 public class AnimalScript : MonoBehaviour
 {
     #region Public Attributs
-    public static float ForcePowerSwap = 60.0f;
+    public static float ForcePowerSwap = 100.0f;
     #endregion
 
     #region Private Attributs

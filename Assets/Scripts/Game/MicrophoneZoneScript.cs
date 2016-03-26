@@ -40,7 +40,8 @@ public class MicrophoneZoneScript : MonoBehaviour
             isBlowing = true;
             foreach (GameObject go in ListObjectsActif)
             {
-                Destroy(go);
+                if (go != null)
+                    Destroy(go);
             }
         }
         else

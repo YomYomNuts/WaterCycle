@@ -7,6 +7,7 @@ public class Const
     public const int LAYER_ANIMALS = 9;
     public const int LAYER_VAPOR = 10;
     public const int LAYER_OGM = 11;
-    public const int LAYER_PURIFYING = 12;
+    public const int LAYER_WASTE = 12;
+    public const int LAYER_PURIFYING = 13;
     #endregion
 }
