@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEditor;
 
-public class Utils : MonoBehaviour {
+public class Utils : MonoBehaviour
+{
 
 	// Use this for initialization
-	void Start () {
-	
+	void Start ()
+    {
 	}
 	
 	// Update is called once per frame
@@ -37,8 +37,8 @@ public class Utils : MonoBehaviour {
             new Vector2(1.0f, 0.0f),
         };
         m.triangles = new int[] { 0, 1, 2, 2, 3, 0};
-        AssetDatabase.CreateAsset(m, "Assets/Models/" + m.name + ".asset");
-        AssetDatabase.SaveAssets();
+        /*AssetDatabase.CreateAsset(m, "Assets/Models/" + m.name + ".asset");
+        AssetDatabase.SaveAssets();*/
         Debug.Log("Save");
     }
 }
