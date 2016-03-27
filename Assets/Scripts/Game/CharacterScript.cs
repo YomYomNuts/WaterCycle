@@ -4,6 +4,7 @@ public class CharacterScript : MonoBehaviour
 {
     #region Public Attributs
     public int NumberLife;
+    public int Score = 100;
     #endregion
 
     #region Private Attributs
@@ -48,7 +49,11 @@ public class CharacterScript : MonoBehaviour
         {
             case Const.LAYER_VAPOR:
             case Const.LAYER_ANIMALS:
+            case Const.LAYER_OGM:
+            case Const.LAYER_WASTE:
                 --CurrentLife;
+                --Score;
+                SaveInformations();
                 break;
         }
     }
@@ -56,5 +61,23 @@ public class CharacterScript : MonoBehaviour
     public void LifeUp()
     {
         CurrentLife = CurrentLife + 1 > NumberLife ? NumberLife : CurrentLife + 1;
+        ++Score;
+        SaveInformations();
+    }
+
+    private void SaveInformations()
+    {
+        PlayerPrefs.SetInt("Player Score", Score);
+        PlayerPrefs.SetInt("Player Life", CurrentLife);
+    }
+
+    public static int GetScore()
+    {
+        return PlayerPrefs.GetInt("Player Score");
+    }
+
+    public static int GetLife()
+    {
+        return PlayerPrefs.GetInt("Player Life");
     }
 }
