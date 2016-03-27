@@ -12,14 +12,12 @@ public class LevelScript : MonoBehaviour
     #endregion
 
     #region Private Attributs
-    private Vector3 DiffBetweenLevels;
     #endregion
 
     // Use this for initialization
     void Start ()
     {
-        Assert.IsFalse(PlanesLevels.Count < 2);
-        DiffBetweenLevels = PlanesLevels[1].transform.position - PlanesLevels[0].transform.position;
+        //DiffBetweenLevels = PlanesLevels[1].transform.position - PlanesLevels[0].transform.position;
     }
 	
 	// Update is called once per frame
@@ -29,7 +27,7 @@ public class LevelScript : MonoBehaviour
         Vector3 addPosition = new Vector3(0.0f, 0.0f, -SpeedLevel * Time.deltaTime);
         foreach (GameObject level in PlanesLevels)
             level.transform.position += addPosition;
-        for (int i = 0; i < PlanesLevels.Count; ++i)
+        /*for (int i = 0; i < PlanesLevels.Count; ++i)
         {
             GameObject level = PlanesLevels[i];
             if (level.transform.position.z < EndLevelsPosition.z)
@@ -37,6 +35,6 @@ public class LevelScript : MonoBehaviour
                 int previsouIndex = i - 1 < 0 ? PlanesLevels.Count - 1 : i - 1;
                 level.transform.position = PlanesLevels[previsouIndex].transform.position + DiffBetweenLevels;
             }
-        }
+        }*/
     }
 }

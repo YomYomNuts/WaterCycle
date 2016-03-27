@@ -9,5 +9,6 @@ public class Const
     public const int LAYER_OGM = 11;
     public const int LAYER_WASTE = 12;
     public const int LAYER_PURIFYING = 13;
+    public const int LAYER_LEVEL = 14;
     #endregion
 }

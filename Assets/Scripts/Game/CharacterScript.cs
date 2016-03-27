@@ -28,8 +28,6 @@ public class CharacterScript : MonoBehaviour
     {
         if (CharacterScript._instance == null)
             CharacterScript._instance = this;
-        else if (CharacterScript._instance != this)
-            Destroy(this.gameObject);
     }
 
     // Use this for initialization
