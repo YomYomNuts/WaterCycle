@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterScript : MonoBehaviour
 {
     #region Public Attributs
     public int NumberLife;
     public int Score = 100;
+    public string NextSceneLose;
     #endregion
 
     #region Private Attributs
@@ -52,6 +54,8 @@ public class CharacterScript : MonoBehaviour
                 --CurrentLife;
                 --Score;
                 SaveInformations();
+                if (CurrentLife == 0)
+                    SceneManager.LoadScene(NextSceneLose);
                 break;
         }
     }
